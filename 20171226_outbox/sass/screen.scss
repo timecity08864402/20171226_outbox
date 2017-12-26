@@ -1,0 +1,312 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+@charset "UTF-8";
+@import "reset.css";
+
+
+
+/*
+@include POS(475px,75px);
+@include css3(transition,all 1s ease);
+@include css3(box-shadow,0px 0px 14px #ffffff);
+@include css3(border-radius,20px);
+border: 2px solid #6d4b00;
+left: calc(50% - 82.5px);
+
+
+.tablestyle{
+    table{
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 2px!important;
+        font-size: 16px;
+        line-height:1.5;
+    }
+    table tr td{
+        text-align: center;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+          background-color: rgba(76, 46, 0, 0.17);
+        }
+        span{
+            @include midtext();
+            font-size: 23px;
+        }
+}
+*/
+
+
+
+/*
+@include css3(transition,all 1s ease);
+@include css3(animation,opacitylight 2s infinite linear);
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+
+/*
+@media screen and (min-width: 0px) and (max-width:640px) {}
+@media screen and (min-width: 641px) and (max-width:1200px) {}
+@media screen and (min-width: 1201px) and (max-width:2000px) {}
+*/
+
+
+
+
+
+
+@mixin size($w,$h:$w){
+    width: $w ;
+    height: $h ;
+}
+/*zindex*/
+
+@mixin zindex() {
+    z-index: 999;
+}
+
+
+/*midtext*/
+
+@mixin midtext() {
+    font: bold 20px/40px sans-serif;
+    font-family: Microsoft JhengHei;
+    letter-spacing: 1px;
+}
+
+
+/*stext*/
+
+@mixin stext() {
+    font: bolder 14px/15px sans-serif;
+    font-family: Microsoft JhengHei;
+    color: #fff;
+}
+/*btn*/
+
+@mixin btntext() {
+    font: bolder 25px/45px sans-serif;
+    font-family: Microsoft JhengHei;
+}
+@mixin ellipsistext() {
+overflow : hidden;
+text-overflow : ellipsis;
+white-space : nowrap; 
+}
+
+/*specify*/
+
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-,
+    -moz-,
+    -ms-,
+    -o-,
+    '' {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+
+/*keyframes*/
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+/*Responsive*/
+
+@mixin Responsive($point) {
+    @if $point==large {
+        @media (min-width: 2000px) {
+            @content;
+        }
+    }
+    @else if $point==medium {
+        @media (min-width: 1200em) {
+            @content;
+        }
+    }
+    @else if $point==small {
+        @media (min-width: 640em) {
+            @content;
+        }
+    }
+}
+
+@mixin range-width-in( $min: 0, $max: 0){
+    @if $max == 0{
+        @media screen and (min-width: $min){
+            @content;
+        }
+    }@else{
+        @media screen and (min-width: $min) and (max-width: $max){
+            @content;
+        }
+    }
+}
+
+
+/*radius*/
+
+@mixin border-radius($angle) {
+    border-radius: $angle;
+    -webkit-border-radius: $angle;
+    -moz-border-radius: $angle;
+    -ms-border-radius: $angle;
+    -o-border-radius: $angle;
+}
+
+
+/*boxshadow*/
+
+@mixin boxshadow($shx, $shy, $shblur, $shcolor) {
+    box-shadow: $shx $shy $shblur $shcolor;
+    -webkit-box-shadow: $shx $shy $shblur $shcolor;
+    -moz-box-shadow: $shx $shy $shblur $shcolor;
+    -ms-border-radius: $shx $shy $shblur $shcolor;
+    -o-box-shadow: $shx $shy $shblur $shcolor;
+}
+
+
+/*POS*/
+
+@mixin POS($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+
+/*SIZE*/
+
+@mixin SIZE($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+/*clearfix*/
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/*changebg*/
+
+@mixin bg($name, $bg) {
+    background: url("../images/#{$name}.#{$bg}");
+    width: image-width("../images/#{$name}.#{$bg}");
+    height: image-height("../images/#{$name}.#{$bg}");
+}
+/*gridbox*/
+
+@mixin grid($cols, $mgn){
+    float: left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (( $cols - 1) * $mgn)) / $cols );
+    &:nth-child(#{$cols}n){
+        margin-right: 0;
+    }
+}
+
+
+/*animated-picandtxt*/
+
+a{
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    font-size: 14px;
+    @include range-width-in(0,768px){
+    
+    }
+}
+html{
+    font-size: 10px;
+   @include range-width-in(0,768px){
+        font-size: 8px;
+    } 
+}
+
+.alertbox{
+    font: normal 2rem/3rem "Microsoft JhengHei";
+    text-align: center;
+    background: #fff;
+    color:#343434;
+    width: 85%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 25vh;
+    @include css3(border-radius,0.4rem);
+    overflow: hidden;
+    header{
+        line-height: 4rem;
+        font-size: 2.6rem;
+        color:#fff;
+        background: #e83b50;
+        font-weight: bolder;
+        i{
+            margin-right: .8rem;
+        }
+    }
+    article{
+        padding: 3%;
+        @include css3(transition,all .3s ease);
+    }
+    .alertbottom{
+        background: #e83b50;
+        @include css3(border-radius,2.8rem);
+        line-height: 3rem;
+        color:#fff;
+        cursor: pointer;
+        width: 55%;
+        max-width: 230px;
+        margin: 0 auto;
+        margin-top: 1rem;
+        @include css3(transition,all .3s ease);
+        &:hover,&:active{
+            background: #d83637;
+        }
+    }
+}

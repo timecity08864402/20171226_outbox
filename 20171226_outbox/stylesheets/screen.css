@@ -1,0 +1,161 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(reset.css);
+/*
+@include POS(475px,75px);
+@include css3(transition,all 1s ease);
+@include css3(box-shadow,0px 0px 14px #ffffff);
+@include css3(border-radius,20px);
+border: 2px solid #6d4b00;
+left: calc(50% - 82.5px);
+
+
+.tablestyle{
+    table{
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 2px!important;
+        font-size: 16px;
+        line-height:1.5;
+    }
+    table tr td{
+        text-align: center;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+          background-color: rgba(76, 46, 0, 0.17);
+        }
+        span{
+            @include midtext();
+            font-size: 23px;
+        }
+}
+*/
+/*
+@include css3(transition,all 1s ease);
+@include css3(animation,opacitylight 2s infinite linear);
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+/*
+@media screen and (min-width: 0px) and (max-width:640px) {}
+@media screen and (min-width: 641px) and (max-width:1200px) {}
+@media screen and (min-width: 1201px) and (max-width:2000px) {}
+*/
+/*zindex*/
+/*midtext*/
+/*stext*/
+/*btn*/
+/*specify*/
+/*keyframes*/
+/*Responsive*/
+/*radius*/
+/*boxshadow*/
+/*POS*/
+/*SIZE*/
+/*clearfix*/
+/*changebg*/
+/*gridbox*/
+/*animated-picandtxt*/
+/* line 250, ../sass/screen.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 253, ../sass/screen.scss */
+li {
+  list-style: none;
+}
+
+/* line 257, ../sass/screen.scss */
+body {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+/* line 265, ../sass/screen.scss */
+html {
+  font-size: 10px;
+}
+@media screen and (min-width: 0) and (max-width: 768px) {
+  /* line 265, ../sass/screen.scss */
+  html {
+    font-size: 8px;
+  }
+}
+
+/* line 272, ../sass/screen.scss */
+.alertbox {
+  font: normal 2rem/3rem "Microsoft JhengHei";
+  text-align: center;
+  background: #fff;
+  color: #343434;
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 25vh;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+/* line 283, ../sass/screen.scss */
+.alertbox header {
+  line-height: 4rem;
+  font-size: 2.6rem;
+  color: #fff;
+  background: #e83b50;
+  font-weight: bolder;
+}
+/* line 289, ../sass/screen.scss */
+.alertbox header i {
+  margin-right: .8rem;
+}
+/* line 293, ../sass/screen.scss */
+.alertbox article {
+  padding: 3%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 297, ../sass/screen.scss */
+.alertbox .alertbottom {
+  background: #e83b50;
+  -webkit-border-radius: 2.8rem;
+  -moz-border-radius: 2.8rem;
+  -ms-border-radius: 2.8rem;
+  -o-border-radius: 2.8rem;
+  border-radius: 2.8rem;
+  line-height: 3rem;
+  color: #fff;
+  cursor: pointer;
+  width: 55%;
+  max-width: 230px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 308, ../sass/screen.scss */
+.alertbox .alertbottom:hover, .alertbox .alertbottom:active {
+  background: #d83637;
+}
