@@ -98,7 +98,7 @@ html {
 
 /* line 272, ../sass/screen.scss */
 .alertbox {
-  font: normal 2rem/3rem "Microsoft JhengHei";
+  font: normal 2rem/2.5rem "Microsoft JhengHei";
   text-align: center;
   background: #fff;
   color: #343434;
@@ -127,7 +127,7 @@ html {
 }
 /* line 293, ../sass/screen.scss */
 .alertbox article {
-  padding: 3%;
+  padding: 5%;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -145,10 +145,10 @@ html {
   line-height: 3rem;
   color: #fff;
   cursor: pointer;
-  width: 55%;
-  max-width: 230px;
+  width: 65%;
+  max-width: 200px;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;

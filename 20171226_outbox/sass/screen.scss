@@ -270,7 +270,7 @@ html{
 }
 
 .alertbox{
-    font: normal 2rem/3rem "Microsoft JhengHei";
+    font: normal 2rem/2.5rem "Microsoft JhengHei";
     text-align: center;
     background: #fff;
     color:#343434;
@@ -291,7 +291,7 @@ html{
         }
     }
     article{
-        padding: 3%;
+        padding: 5%;
         @include css3(transition,all .3s ease);
     }
     .alertbottom{
@@ -300,10 +300,10 @@ html{
         line-height: 3rem;
         color:#fff;
         cursor: pointer;
-        width: 55%;
-        max-width: 230px;
+        width: 65%;
+        max-width: 200px;
         margin: 0 auto;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         @include css3(transition,all .3s ease);
         &:hover,&:active{
             background: #d83637;
