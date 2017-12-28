@@ -1,0 +1,531 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+@import "reset.css";
+
+
+
+/*
+@include POS(475px,75px);
+@include css3(transition,all 1s ease);
+@include css3(box-shadow,0px 0px 14px #ffffff);
+@include css3(border-radius,20px);
+border: 2px solid #6d4b00;
+left: calc(50% - 82.5px);
+
+
+.tablestyle{
+    table{
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 2px!important;
+        font-size: 16px;
+        line-height:1.5;
+    }
+    table tr td{
+        text-align: center;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+          background-color: rgba(76, 46, 0, 0.17);
+        }
+        span{
+            @include midtext();
+            font-size: 23px;
+        }
+}
+*/
+
+
+
+/*
+@include css3(transition,all 1s ease);
+@include css3(animation,opacitylight 2s infinite linear);
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+
+/*
+@media screen and (min-width: 0px) and (max-width:640px) {}
+@media screen and (min-width: 641px) and (max-width:1200px) {}
+@media screen and (min-width: 1201px) and (max-width:2000px) {}
+*/
+
+
+
+
+
+
+@mixin size($w,$h:$w){
+    width: $w ;
+    height: $h ;
+}
+/*zindex*/
+
+@mixin zindex() {
+    z-index: 999;
+}
+
+/*linear-gradient*/
+@mixin linear-gradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+/*midtext*/
+
+@mixin midtext() {
+    font: bold 20px/40px sans-serif;
+    font-family: Microsoft JhengHei;
+    letter-spacing: 1px;
+}
+
+
+/*stext*/
+
+@mixin stext() {
+    font: bolder 14px/15px sans-serif;
+    font-family: Microsoft JhengHei;
+    color: #fff;
+}
+/*btn*/
+
+@mixin btntext() {
+    font: bolder 25px/45px sans-serif;
+    font-family: Microsoft JhengHei;
+}
+@mixin ellipsistext() {
+overflow : hidden;
+text-overflow : ellipsis;
+white-space : nowrap; 
+}
+
+/*specify*/
+
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-,
+    -moz-,
+    -ms-,
+    -o-,
+    '' {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+
+/*keyframes*/
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+/*Responsive*/
+
+@mixin Responsive($point) {
+    @if $point==large {
+        @media (min-width: 2000px) {
+            @content;
+        }
+    }
+    @else if $point==medium {
+        @media (min-width: 1200em) {
+            @content;
+        }
+    }
+    @else if $point==small {
+        @media (min-width: 640em) {
+            @content;
+        }
+    }
+}
+
+@mixin range-width-in( $min: 0, $max: 0){
+    @if $max == 0{
+        @media screen and (min-width: $min){
+            @content;
+        }
+    }@else{
+        @media screen and (min-width: $min) and (max-width: $max){
+            @content;
+        }
+    }
+}
+
+
+/*radius*/
+
+@mixin border-radius($angle) {
+    border-radius: $angle;
+    -webkit-border-radius: $angle;
+    -moz-border-radius: $angle;
+    -ms-border-radius: $angle;
+    -o-border-radius: $angle;
+}
+
+
+/*boxshadow*/
+
+@mixin boxshadow($shx, $shy, $shblur, $shcolor) {
+    box-shadow: $shx $shy $shblur $shcolor;
+    -webkit-box-shadow: $shx $shy $shblur $shcolor;
+    -moz-box-shadow: $shx $shy $shblur $shcolor;
+    -ms-border-radius: $shx $shy $shblur $shcolor;
+    -o-box-shadow: $shx $shy $shblur $shcolor;
+}
+
+
+/*POS*/
+
+@mixin POS($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+
+/*SIZE*/
+
+@mixin SIZE($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+/*clearfix*/
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/*changebg*/
+
+@mixin bg($name, $bg) {
+    background: url("../images/#{$name}.#{$bg}");
+    width: image-width("../images/#{$name}.#{$bg}");
+    height: image-height("../images/#{$name}.#{$bg}");
+}
+/*gridbox*/
+
+@mixin grid($cols, $mgn){
+    float: left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (( $cols - 1) * $mgn)) / $cols );
+    &:nth-child(#{$cols}n){
+        margin-right: 0;
+    }
+}
+
+
+/*animated-picandtxt*/
+
+a{
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+html{
+    font-size: 16px;
+}
+body {
+    width: 100%;
+    background: #ececec;
+    font: normal 0.75rem/20px "Microsoft Yahei", -apple-system, "Helvetica Neue", Roboto, "Segoe UI", sans-serif;
+}
+
+.wrapper {
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+.wrapper_in{
+    width: calc(100% - 30px);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+.wrapper_out{
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 3.6rem;
+}
+/*header*/
+header{
+    //background: linear-gradient(#db3542, #bc2741);
+    @include linear-gradient(#db3542, #bc2741);
+    height: 45px;
+    color:#fff;
+    line-height: 45px;
+    font-size: 1rem;
+    position: fixed;
+    vertical-align: middle;
+    z-index: 10;
+    i{
+        font-size: 1.5rem;
+        line-height: 45px!important;
+    }
+    .text{
+        line-height: 45px;
+        margin-right: 12px;
+    }
+    a{color:#fff;}
+    .header_list{
+        float: left;
+    }
+    .header_login{
+        float: right;
+        >*{
+            float: left;
+        }
+    }
+}
+/**********/
+
+/*banner*/
+.banner{
+    position: relative;
+    .bannernews{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,.75);
+        color:#d5d5d5;
+        line-height: 30px;
+        >*{
+            float: left;
+        }
+        i{
+            color:#fff;
+            width: 30px;
+            font-size: 1rem;
+            line-height: 30px!important;
+            text-align: center;
+        }
+        .newsrun{
+            width: calc(100% - 30px);
+            font-size: 0.75rem;
+            div{
+               @include ellipsistext();
+               padding-right: 2%;
+            }
+        }
+    }
+}
+/*********/
+
+
+/*content*/
+.content{
+    .taglist{
+        line-height:2rem; 
+        background: #fff;
+        text-align: center;
+        overflow: hidden;
+        padding: 0.5rem 0;
+        a{
+            &:last-child{
+                li{border-right:0;}
+            }
+        }
+        li{
+            float: left;
+            width: calc(100% / 3 - 2px);
+            color:#343434;
+            font-size: 0.9rem;
+            border-right: 1px solid #eeeeee;
+            i{
+                margin-right: 0.5rem;
+                font-size: 1.5rem;
+                vertical-align: middle;
+            }
+        }
+
+    }
+    .lotteryselect{
+        margin-top: 10px;
+        overflow: hidden;
+        background: #e4e4e4;
+        li{
+            float: left;
+            background: #fff;
+            width: calc(25% - 0.8px);
+            border-bottom:1px solid #eee;
+            border-left: 1px solid #eee;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            @include css3(transition,all .3s ease);
+            img{
+                width: 70%;
+                margin: 15%;
+                margin-bottom: 0;
+            }
+            @include range-width-in(0,399px){
+                width: calc((100% - 2px) / 3);
+                &:nth-child(3n+1){border-left: 0px;}
+            }
+            @include range-width-in(400px,767px){
+                width: calc((100% - 3px) / 4);
+                &:nth-child(4n+1){border-left: 0px;}
+            }
+            @include range-width-in(768px,1079px){
+                width: calc((100% - 4px) / 5);
+                &:nth-child(5n+1){border-left: 0px;}
+            }
+            @include range-width-in(1080px,2000px){
+                width: calc((100% - 7px) / 8);
+                &:nth-child(8n+1){border-left: 0px;}
+            }
+            .text{
+                font-size: 0.9rem;
+                padding-bottom: 15%;
+                @include ellipsistext();
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                right: 0px;
+                top: 0px;
+                width: 50%;
+                height: 50%;
+            }
+        }
+        .tag_heart{
+            &:before{
+                position: absolute;
+                margin: 5px;
+                /* use !important to prevent issues with browser extensions that change fonts */
+                font-family: 'icomoon' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+
+                /* Better Font Rendering =========== */
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "\e909";
+                color: #eb2f38;
+            }
+        }
+        .tag_popular{
+            &:after{
+                background: url(../images/tag_01.png) top right no-repeat;
+                background-size: contain;
+            }
+        }
+        .tag_hot{
+            &:after{
+                background: url(../images/tag_02.png) top right 100% no-repeat;
+                background-size: contain;
+            }
+        }
+        .tag_demo{
+            &:after{
+                background: url(../images/tag_03.png) top right 100% no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+/*********/
+/*copyright*/
+.cr{
+    text-align: center;
+    font-size: .8rem;
+    line-height: 1.8rem;
+    vertical-align: middle;
+    .wrapper_in{
+        margin: 2rem auto;
+        .tpcicon{
+            font-size: 2.5rem;
+            margin-right: 0.3rem;
+            &:before{
+                vertical-align: middle;
+            }
+        }
+        .textbtn{
+            font-size: 1rem;
+            padding: 0.2rem 0.7rem;
+            @include linear-gradient(#cecdcd, #aaa8a9);
+            @include css3(border-radius,1.5rem);
+            color:#fff;
+            vertical-align: text-bottom;
+        }
+        .copyright{
+            font-size: .7rem;
+            color: #aaa8a9;
+        }
+    }
+}
+/*********/
+/*nav_bottom*/
+.nav_bottom{
+    position: fixed;
+    bottom: 0;
+    background: #303030;
+    color:#fff;
+    text-align: center;
+    overflow: hidden;
+    li{
+        float: left;
+        width: 25%;
+        padding: 0.7rem 0 0.4rem 0;
+        color:#fff;
+        i{
+            margin-bottom: 0.1rem;
+            display: block;
+            &:before{
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    .active{
+        background: #252525;
+    }
+}
