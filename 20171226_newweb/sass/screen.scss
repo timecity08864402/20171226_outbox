@@ -397,15 +397,16 @@ header{
             position: relative;
             @include css3(transition,all .3s ease);
             img{
-                width: 70%;
-                margin: 15%;
+                width: 50%;
+                margin: 0 25%;
+                margin-top: 15%;
                 margin-bottom: 0;
             }
-            @include range-width-in(0,399px){
+            @include range-width-in(0,374px){
                 width: calc((100% - 2px) / 3);
                 &:nth-child(3n+1){border-left: 0px;}
             }
-            @include range-width-in(400px,767px){
+            @include range-width-in(375px,767px){
                 width: calc((100% - 3px) / 4);
                 &:nth-child(4n+1){border-left: 0px;}
             }
