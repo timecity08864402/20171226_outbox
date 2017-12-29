@@ -390,9 +390,10 @@ header{
             float: left;
             background: #fff;
             width: calc(25% - 0.8px);
-            //border-bottom:1px solid #d9dcdf;
-            //border-left: 1px solid #d9dcdf;
-            border: .5px solid #d9dcdf;
+            border-bottom:.5px solid #d9dcdf;
+            border-top:1px solid #d9dcdf;
+            border-left: .5px solid #d9dcdf;
+            //border: .5px solid #d9dcdf;
             text-align: center;
             overflow: hidden;
             position: relative;
