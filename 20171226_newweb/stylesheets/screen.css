@@ -110,7 +110,7 @@ body {
 /* line 287, ../sass/screen.scss */
 .wrapper_out {
   position: relative;
-  padding-top: 45px;
+  padding-top: 44px;
   padding-bottom: 3.6rem;
 }
 
@@ -133,9 +133,9 @@ header {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
   /* IE6-9 */
-  height: 45px;
+  height: 44px;
   color: #fff;
-  line-height: 45px;
+  line-height: 44px;
   font-size: 1rem;
   position: fixed;
   vertical-align: middle;
@@ -144,11 +144,11 @@ header {
 /* line 303, ../sass/screen.scss */
 header i {
   font-size: 1.5rem;
-  line-height: 45px !important;
+  line-height: 44px !important;
 }
 /* line 307, ../sass/screen.scss */
 header .text {
-  line-height: 45px;
+  line-height: 44px;
   margin-right: 12px;
 }
 /* line 311, ../sass/screen.scss */
@@ -448,7 +448,7 @@ header .header_login > * {
 .nav_bottom li {
   float: left;
   width: 25%;
-  padding: 0.7rem 0 0.4rem 0;
+  padding-top: 3px;
   color: #fff;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -462,16 +462,15 @@ header .header_login > * {
 }
 /* line 538, ../sass/screen.scss */
 .nav_bottom li i {
-  margin-bottom: 0.1rem;
   display: block;
 }
-/* line 541, ../sass/screen.scss */
+/* line 540, ../sass/screen.scss */
 .nav_bottom li i:before {
-  font-size: 1.6rem;
-  line-height: 1.6rem;
+  font-size: 28px;
+  line-height: 28px;
   vertical-align: middle;
 }
-/* line 549, ../sass/screen.scss */
+/* line 548, ../sass/screen.scss */
 .nav_bottom .active {
   background: #252525;
 }
