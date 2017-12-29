@@ -358,11 +358,11 @@ header{
 /*content*/
 .content{
     .taglist{
-        line-height:2rem; 
+        line-height:1rem; 
         background: #fff;
         text-align: center;
         overflow: hidden;
-        padding: 0.5rem 0;
+        padding: 0.3rem 0;
         a{
             &:last-child{
                 li{border-right:0;}
