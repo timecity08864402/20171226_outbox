@@ -390,48 +390,41 @@ header{
             float: left;
             background: #fff;
             width: calc(25% - 0.8px);
-            border-bottom:1px solid #d9dcdf;
-            border-left: 1px solid #d9dcdf;
+            //border-bottom:1px solid #d9dcdf;
+            //border-left: 1px solid #d9dcdf;
+            border: .5px solid #d9dcdf;
             text-align: center;
             overflow: hidden;
             position: relative;
-            @include css3(transition,all .5s ease);
+            @include css3(transition,all .3s ease);
             &:hover{
                 background: #eee;
             }
             img{
-                width: 50%;
-                margin: 0 25%;
+                width: 70%;
+                margin: 0 15%;
                 margin-top: 15%;
                 margin-bottom: 0;
             }
-            &:nth-child(1),&:nth-child(2),&:nth-child(3){
-                    border-top: 1px solid #d9dcdf;
-                }
             @include range-width-in(0,374px){
                 width: calc((100% - 2px) / 3);
                 &:nth-child(3n+1){border-left: 0px;}
+                &:nth-child(3n+0){border-right: 0px;}
             }
             @include range-width-in(375px,767px){
                 width: calc((100% - 3px) / 4);
                 &:nth-child(4n+1){border-left: 0px;}
-                &:nth-child(4){
-                    border-top: 1px solid #d9dcdf;
-                }
+                &:nth-child(4n+0){border-right: 0px;}
             }
             @include range-width-in(768px,1079px){
                 width: calc((100% - 4px) / 5);
                 &:nth-child(5n+1){border-left: 0px;}
-                &:nth-child(4),&:nth-child(5){
-                    border-top: 1px solid #d9dcdf;
-                }
+                &:nth-child(5n+0){border-right: 0px;}
             }
             @include range-width-in(1080px,2000px){
                 width: calc((100% - 7px) / 8);
                 &:nth-child(8n+1){border-left: 0px;}
-                &:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8){
-                    border-top: 1px solid #d9dcdf;
-                }
+                &:nth-child(8n+0){border-right: 0px;}
             }
             .text{
                 font-size: 0.9rem;
@@ -475,13 +468,13 @@ header{
         }
         .tag_hot{
             &:after{
-                background: url(../images/tag_02.png) top right 100% no-repeat;
+                background: url(../images/tag_02.png) top right no-repeat;
                 background-size: contain;
             }
         }
         .tag_demo{
             &:after{
-                background: url(../images/tag_03.png) top right 100% no-repeat;
+                background: url(../images/tag_03.png) top right no-repeat;
                 background-size: contain;
             }
         }
