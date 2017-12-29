@@ -266,9 +266,9 @@ header .header_login > * {
 }
 /* line 404, ../sass/screen.scss */
 .content .lotteryselect li img {
-  width: 70%;
-  margin: 0 15%;
-  margin-top: 15%;
+  width: 60%;
+  margin: 0 20%;
+  margin-top: 20%;
   margin-bottom: 0;
 }
 @media screen and (min-width: 0) and (max-width: 374px) {
