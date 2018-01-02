@@ -333,9 +333,10 @@ header .header_login > * {
   height: 30px;
   line-height: 15px;
   margin-bottom: 5%;
+  padding: 0 10px;
   overflow: hidden;
 }
-/* line 438, ../sass/screen.scss */
+/* line 439, ../sass/screen.scss */
 .content .lotteryselect li:after {
   position: absolute;
   content: "";
@@ -344,7 +345,7 @@ header .header_login > * {
   width: 50%;
   height: 50%;
 }
-/* line 448, ../sass/screen.scss */
+/* line 449, ../sass/screen.scss */
 .content .lotteryselect .tag_heart:before {
   position: absolute;
   margin: 5px;
@@ -362,17 +363,17 @@ header .header_login > * {
   content: "\e909";
   color: #eb2f38;
 }
-/* line 468, ../sass/screen.scss */
+/* line 469, ../sass/screen.scss */
 .content .lotteryselect .tag_popular:after {
   background: url(../images/tag_01.png) top right no-repeat;
   background-size: contain;
 }
-/* line 474, ../sass/screen.scss */
+/* line 475, ../sass/screen.scss */
 .content .lotteryselect .tag_hot:after {
   background: url(../images/tag_02.png) top right no-repeat;
   background-size: contain;
 }
-/* line 480, ../sass/screen.scss */
+/* line 481, ../sass/screen.scss */
 .content .lotteryselect .tag_demo:after {
   background: url(../images/tag_03.png) top right no-repeat;
   background-size: contain;
@@ -380,27 +381,27 @@ header .header_login > * {
 
 /*********/
 /*copyright*/
-/* line 489, ../sass/screen.scss */
+/* line 490, ../sass/screen.scss */
 .cr {
   text-align: center;
   font-size: .8rem;
   line-height: 1.8rem;
   vertical-align: middle;
 }
-/* line 494, ../sass/screen.scss */
+/* line 495, ../sass/screen.scss */
 .cr .wrapper_in {
   margin: 2rem auto;
 }
-/* line 496, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .cr .wrapper_in .tpcicon {
   font-size: 2.5rem;
   margin-right: 0.3rem;
 }
-/* line 499, ../sass/screen.scss */
+/* line 500, ../sass/screen.scss */
 .cr .wrapper_in .tpcicon:before {
   vertical-align: middle;
 }
-/* line 503, ../sass/screen.scss */
+/* line 504, ../sass/screen.scss */
 .cr .wrapper_in .textbtn {
   font-size: 1rem;
   padding: 0.2rem 0.7rem;
@@ -428,7 +429,7 @@ header .header_login > * {
   color: #fff;
   vertical-align: text-bottom;
 }
-/* line 511, ../sass/screen.scss */
+/* line 512, ../sass/screen.scss */
 .cr .wrapper_in .copyright {
   font-size: .7rem;
   color: #aaa8a9;
@@ -436,7 +437,7 @@ header .header_login > * {
 
 /*********/
 /*nav_bottom*/
-/* line 519, ../sass/screen.scss */
+/* line 520, ../sass/screen.scss */
 .nav_bottom {
   position: fixed;
   bottom: 0;
@@ -445,7 +446,7 @@ header .header_login > * {
   text-align: center;
   overflow: hidden;
 }
-/* line 526, ../sass/screen.scss */
+/* line 527, ../sass/screen.scss */
 .nav_bottom li {
   float: left;
   width: 25%;
@@ -457,21 +458,21 @@ header .header_login > * {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 532, ../sass/screen.scss */
+/* line 533, ../sass/screen.scss */
 .nav_bottom li:hover {
   background: #252525;
 }
-/* line 535, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .nav_bottom li i {
   display: block;
 }
-/* line 537, ../sass/screen.scss */
+/* line 538, ../sass/screen.scss */
 .nav_bottom li i:before {
   font-size: 28px;
   line-height: 28px;
   vertical-align: middle;
 }
-/* line 545, ../sass/screen.scss */
+/* line 546, ../sass/screen.scss */
 .nav_bottom .active {
   background: #252525;
 }
