@@ -266,9 +266,9 @@ header .header_login > * {
 }
 /* line 404, ../sass/screen.scss */
 .content .lotteryselect li img {
-  width: 60%;
-  margin: 0 20%;
-  margin-top: 10%;
+  width: 50%;
+  margin: 0 25%;
+  margin-top: 11%;
   margin-bottom: 0;
 }
 @media screen and (min-width: 0) and (max-width: 374px) {
@@ -329,12 +329,13 @@ header .header_login > * {
 }
 /* line 430, ../sass/screen.scss */
 .content .lotteryselect li .text {
-  font-size: 0.9rem;
-  height: 40px;
+  font-size: 10px;
+  height: 30px;
+  line-height: 15px;
   margin-bottom: 5%;
   overflow: hidden;
 }
-/* line 437, ../sass/screen.scss */
+/* line 438, ../sass/screen.scss */
 .content .lotteryselect li:after {
   position: absolute;
   content: "";
@@ -343,7 +344,7 @@ header .header_login > * {
   width: 50%;
   height: 50%;
 }
-/* line 447, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 .content .lotteryselect .tag_heart:before {
   position: absolute;
   margin: 5px;
@@ -361,17 +362,17 @@ header .header_login > * {
   content: "\e909";
   color: #eb2f38;
 }
-/* line 467, ../sass/screen.scss */
+/* line 468, ../sass/screen.scss */
 .content .lotteryselect .tag_popular:after {
   background: url(../images/tag_01.png) top right no-repeat;
   background-size: contain;
 }
-/* line 473, ../sass/screen.scss */
+/* line 474, ../sass/screen.scss */
 .content .lotteryselect .tag_hot:after {
   background: url(../images/tag_02.png) top right no-repeat;
   background-size: contain;
 }
-/* line 479, ../sass/screen.scss */
+/* line 480, ../sass/screen.scss */
 .content .lotteryselect .tag_demo:after {
   background: url(../images/tag_03.png) top right no-repeat;
   background-size: contain;
@@ -379,27 +380,27 @@ header .header_login > * {
 
 /*********/
 /*copyright*/
-/* line 488, ../sass/screen.scss */
+/* line 489, ../sass/screen.scss */
 .cr {
   text-align: center;
   font-size: .8rem;
   line-height: 1.8rem;
   vertical-align: middle;
 }
-/* line 493, ../sass/screen.scss */
+/* line 494, ../sass/screen.scss */
 .cr .wrapper_in {
   margin: 2rem auto;
 }
-/* line 495, ../sass/screen.scss */
+/* line 496, ../sass/screen.scss */
 .cr .wrapper_in .tpcicon {
   font-size: 2.5rem;
   margin-right: 0.3rem;
 }
-/* line 498, ../sass/screen.scss */
+/* line 499, ../sass/screen.scss */
 .cr .wrapper_in .tpcicon:before {
   vertical-align: middle;
 }
-/* line 502, ../sass/screen.scss */
+/* line 503, ../sass/screen.scss */
 .cr .wrapper_in .textbtn {
   font-size: 1rem;
   padding: 0.2rem 0.7rem;
@@ -427,7 +428,7 @@ header .header_login > * {
   color: #fff;
   vertical-align: text-bottom;
 }
-/* line 510, ../sass/screen.scss */
+/* line 511, ../sass/screen.scss */
 .cr .wrapper_in .copyright {
   font-size: .7rem;
   color: #aaa8a9;
@@ -435,7 +436,7 @@ header .header_login > * {
 
 /*********/
 /*nav_bottom*/
-/* line 518, ../sass/screen.scss */
+/* line 519, ../sass/screen.scss */
 .nav_bottom {
   position: fixed;
   bottom: 0;
@@ -444,7 +445,7 @@ header .header_login > * {
   text-align: center;
   overflow: hidden;
 }
-/* line 525, ../sass/screen.scss */
+/* line 526, ../sass/screen.scss */
 .nav_bottom li {
   float: left;
   width: 25%;
@@ -456,21 +457,21 @@ header .header_login > * {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 531, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 .nav_bottom li:hover {
   background: #252525;
 }
-/* line 534, ../sass/screen.scss */
+/* line 535, ../sass/screen.scss */
 .nav_bottom li i {
   display: block;
 }
-/* line 536, ../sass/screen.scss */
+/* line 537, ../sass/screen.scss */
 .nav_bottom li i:before {
   font-size: 28px;
   line-height: 28px;
   vertical-align: middle;
 }
-/* line 544, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .nav_bottom .active {
   background: #252525;
 }

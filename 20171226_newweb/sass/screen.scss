@@ -402,9 +402,9 @@ header{
                 background: #eee;
             }
             img{
-                width: 60%;
-                margin: 0 20%;
-                margin-top: 10%;
+                width: 50%;
+                margin: 0 25%;
+                margin-top: 11%;
                 margin-bottom: 0;
             }
             @include range-width-in(0,374px){
@@ -428,8 +428,9 @@ header{
                 &:nth-child(8n+0){border-right: 0px;}
             }
             .text{
-                font-size: 0.9rem;
-                height: 40px;
+                font-size: 10px;
+                height: 30px;
+                line-height: 15px;
                 margin-bottom: 5%;
                 //@include ellipsistext();
                 overflow: hidden;
